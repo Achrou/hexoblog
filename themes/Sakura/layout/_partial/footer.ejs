@@ -1,0 +1,134 @@
+<!-- <footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+
+<footer id="colophon" class="site-footer" role="contentinfo" style="clear:both;">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">
+        <p>
+          <span style="color: #666666">
+              Author with
+              <i class="fa fa-heart animated" style="color: #e74c3c">
+              </i>
+              by
+              <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2643053021&amp;site=qq&amp;menu=yes" target="_blank" style="color: #000000;text-decoration:none">
+                  MoMiK
+              </a>
+          </span>
+        </p>
+        <p>
+            © 2018 MoMiK 鲁ICP备18025681号
+        </p>
+      </p>
+    </div>
+          <p id="footer-sponsor">
+            <a href="https://portal.qiniu.com/signup?code=3lhfs70mo65oy" target="_blank"
+            alt="CDN Sponsor" rel="nofollow">
+                <img src="https://www.qiniu.com/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png"
+                alt="CDN Sponsor" style="height: 2em; max-height: 2em;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="http://www.vultr.com/?ref=7196564" target="_blank" alt="Server provider"
+            rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/logo_onwhite.png"
+                alt="Server provider" style="height: 1.3em; max-height: 1.3em;padding-bottom: 0px;margin-bottom: 0.35em;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/JsDelivr_Logo.svg"
+                alt="jsDelivr" style="height: 2em; max-height: 2em;padding-bottom: 0px;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.google.com/intl/ja/analytics/" target="_blank" alt="Analytics solution"
+            rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/Google.svg"
+                alt="Google Analytics" style="height: 1.7em; max-height: 1.7em;padding-bottom: 0px;">
+            </a>
+        </p>
+        <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">
+          Theme <a href="https://2heng.xin/theme-sakura/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">hexo-sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer><!-- #colophon -->
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="<%- theme.cdn %>/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="<%- theme.cdn %>/js/InsightSearch.js"></script>
+<script type="text/javascript" src="<%- theme.cdn %>/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="<%- theme.cdn %>/js/zoom.min.js"></script>
+<script type="text/javascript" src="<%- theme.cdn %>/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.movies.url %>","name":"<%- theme.movies.name%>","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.movies.url %>","name":"<%- theme.movies.name%>","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>

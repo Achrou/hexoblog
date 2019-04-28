@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    /*height: 35px;*/
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    font-size: 15px;
+    color: orange;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .lrc-show {
+    display: block !important;
+  }
+</style>
+<div class="aplayer"
+    data-id="<%- theme.aplayer.id %>"
+    data-server="<%- theme.aplayer.server %>"
+    data-type="<%- theme.aplayer.type %>"
+    data-fixed="<%- theme.aplayer.fixed %>"
+    data-order="<%- theme.aplayer.order %>"
+    data-preload="<%- theme.aplayer.preload %>">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
