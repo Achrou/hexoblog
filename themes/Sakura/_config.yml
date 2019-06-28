@@ -7,7 +7,7 @@ favicon: /images/favicon.ico
 avatar: /images/author.gif
 url: https://jsonpop.github.io
 description: 胭脂泪，相留醉，几时重。自是人生长恨水长东。-李煜
-cdn: https://cdn.jsdelivr.net/gh/jsonpop/jsonpop.github.io@1.0.2
+cdn: https://cdn.jsdelivr.net/gh/jsonpop/jsonpop.github.io@master
 
 pjax: 1
 # 1开启
