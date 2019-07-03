@@ -1,6 +1,6 @@
 ---
 
-title: "记一次Data truncation: Out of range value for column ''"
+title: "记一次Data truncation: Out of range value for column"
 author: MoMik
 avatar: /images/author.gif
 categories: 自学教程
@@ -12,7 +12,7 @@ authorDesc:
 tags:
 keywords:
 description:
-photos: 
+photos: https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/1tL0PRjnZvVFXiVdIQLO4v.MUE2J3w5ajFkxu2WTq5E!/r/dLYAAAAAAAAAnull&bo=vwY4BAAAAAARB7U!&rf=photolist&t=5_yake_qzoneimgout.png
 ---
 
 今天客户方在使用程序时保存报错，根据他提供的信息来讲始终只有那一条数据保存不进去，具体报的什么错不管是日志还是前端展示上都没有明确体现（这款程序很老先不说，代码写的也贼乱，跑这个项目mac散热飞起…）。所以只能通过数据和调试程序寻找原因了。。。
