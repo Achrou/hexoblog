@@ -5,9 +5,9 @@ author: MoMik
 # favicon and site master avatar
 favicon: /images/favicon.ico
 avatar: /images/author.gif
-url: https://jsonpop.github.io
+url: https://jsonpop.cn
 description: 胭脂泪，相留醉，几时重。自是人生长恨水长东。-李煜
-cdn: https://cdn.jsdelivr.net/gh/jsonpop/jsonpop.github.io@master
+cdn: https://cdn.jsdelivr.net/gh/Aicirou/hexoblog@master/themes/Sakura/source/
 
 pjax: 1
 # 1开启
