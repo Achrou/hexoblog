@@ -24,13 +24,13 @@ http://localhost:8080/oauth/token?grant_type=client_credentials&scope=select&cli
 
 ![](https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/8ykeQAyWunOmb83QwXIp*BNws9gFklyiorMSFmXUe94!/r/dAgBAAAAAAAAnull&bo=IAf8ACAH*AADCSw!&rf=photolist&t=5_yake_qzoneimgout.png)
 
-果然我每发一次请求都会出现一次"Encoded password does not look like BCrypt"，意思是说我们的密码加密类型不是BCrypt。然后百度下这个问题，大部分都是说要配置一个BCryptPasswordEncoder类型的Bean，但是实际上我是配了的。既然这个走不通，我们再回过头结合一下上面挂起的问题，可以确定以下几点：
+果然我每发一次请求都会出现一次"Encoded password does not look like BCrypt"，意思是说我们的密码加密类型不是BCrypt。然后百度下这个问题，大部分都是说要配置一个BCryptPasswordEncoder类型的Bean，但是实际上我是配了的。既然这个走不通，我们再回过头结合一下上面挂起的猜测，可以确定以下几点：
 
 1、client_id、client_secret 存在问题
 
 2、密码加密类型不对
 
-大家都知道client模式的client_id、client_secret其实就是对应的用户名和密码，这样我们就可以确定问题了：client_secret加密类型不正确。
+大家都知道client模式的client_id、client_secret其实就是对应的用户名和密码，这样我们就可以确定问题了：因为加密类型不正确/没有加密 导致client_secret不匹配。
 
 找到设置client_secret值的地方
 
