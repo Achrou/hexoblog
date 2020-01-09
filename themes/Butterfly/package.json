@@ -1,0 +1,9 @@
+{
+  "name": "hexo-theme-butterfly",
+  "version": "2.1.0",
+  "description": "A Hexo Theme: Butterfly",
+  "dependencies": {
+    "hexo-renderer-pug": "^1.0.0",
+    "hexo-renderer-stylus": "^1.1.0"
+  }
+}
