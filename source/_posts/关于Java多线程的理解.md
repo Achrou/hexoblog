@@ -11,6 +11,7 @@ authorDesc:
 tags:
 keywords:
 description:
+cover: https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png
 photos: https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png
 ---
 

@@ -1,8 +1,11 @@
 .card-widget.card-info
   .card-content
     .card-info-avatar.is-center
-      img.avatar-img(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt="avatar")
-      .author-info__name= config.author
+      img.site-author-image(src="http://wx4.sinaimg.cn/large/0069lHOigy1g2g0os2qe4g30f008g139.gif")
+      img.about-photo(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt="avatar")
+      .site-author-name
+        span(style="opacity:.2")= "BUG"
+        span= config.author
       .author-info__description= config.description
 
     .card-info-data

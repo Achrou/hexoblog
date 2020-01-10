@@ -5,19 +5,20 @@
 # xxx || icon:
 #   xxx || 連結 || icon
 menu:
-  Home: / || fa fa-home
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
-  Categories: /categories/ || fa fa-folder-open
-  Link: /link/ || fa fa-link
-  About: /about/ || fa fa-heart
-  List||fa fa-list:
-    - Music || /music/ || fa fa-music
-    - Movie || /movies/ || fa fa-film
+  首页: / || fa fa-home
+  时间轴: /archives/ || fa fa-archive
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-folder-open
+  友链: /link/ || fa fa-link
+  留言板: /comment || fa fa-link
+  关于我: /about/ || fa fa-heart
+  爱好||fa fa-list:
+    - 音乐 || /music/ || fa fa-music
+    - 电影 || /movies/ || fa fa-film
 
 # Favicon
 # ---------------
-favicon: /img/favicon.ico
+favicon: /img/author.gif
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -98,7 +99,7 @@ katex:
 
 # Post info settings
 # ---------------
-avatar: /img/avatar.png
+avatar: /img/author.gif
 
 # the banner image of index
 index_img: http://wx3.sinaimg.cn/large/0069lHOigy1g2ex8838fcj30xc0ku7ip.jpg
@@ -211,24 +212,47 @@ gitalk:
 
 # valine comment system. https://valine.js.org
 valine:
-  enable: false # if you want use valine,please set this value is true
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true # if you want use valine,please set this value is true
+  appId: 6OUHQNTjB1h36BfMiie93Vn4-gzGzoHsz # leancloud application app id
+  appKey: qLkPwvqNJJAyARozPBATyHpg # leancloud application app key
   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
   verify: false # valine verify code (true/false)
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: en # i18n: zh-cn/en
-  placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
+  lang: zh-cn # i18n: zh-cn/en
+  placeholder: 记得留下你的昵称和邮箱...可以快速收到回复 # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
   bg: /img/comment_bg.png # valine background
-  count: false # top_img顯示評論數
+  count: true # top_img顯示評論數
 
 #####     Footer Settings    ####
 # ------------------------------------
 since: 2019
 
-footer_custom_text:
+footer_custom_text: '<p id="footer-sponsor">
+            <a href="https://portal.qiniu.com/signup?code=3lhfs70mo65oy" target="_blank"
+            alt="CDN Sponsor" rel="nofollow">
+                <img src="https://www.qiniu.com/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png"
+                alt="CDN Sponsor" style="height: 2em; max-height: 2em;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="http://www.vultr.com/?ref=7196564" target="_blank" alt="Server provider"
+            rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/logo_onwhite.png"
+                alt="Server provider" style="height: 1.3em; max-height: 1.3em;padding-bottom: 0px;margin-bottom: 0.35em;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/JsDelivr_Logo.svg"
+                alt="jsDelivr" style="height: 2em; max-height: 2em;padding-bottom: 0px;">
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.google.com/intl/ja/analytics/" target="_blank" alt="Analytics solution"
+            rel="nofollow">
+                <img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.8/img/logo/Google.svg"
+                alt="Google Analytics" style="height: 1.7em; max-height: 1.7em;padding-bottom: 0px;">
+            </a>
+        </p>'
 
 footer_copyright:
   enable: true
@@ -344,7 +368,7 @@ tag_ui: # 留空或index
 background:
 
 # footer是否顯示圖片背景(與top_img一致)
-footer_bg: false
+footer_bg: true
 
 # 背景特效
 # 避免卡頓，建議只開啓一個
@@ -377,7 +401,7 @@ canvas_nest:
 activate_power_mode:
   enable: false
   colorful: true # 冒光特效
-  shake: true # 抖動特效
+  shake: false # 抖動特效
 
 # 鼠標點擊效果
 # 避免卡頓，建議只開啓一個
@@ -417,7 +441,7 @@ display_mode: light
 
 # 美化post頁顯示
 post_beautify:
-  enable: false
+  enable: true
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: "#F47466"
 
@@ -450,11 +474,12 @@ subtitle:
   # source: 3  調用一句网（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的内容
-  source: false
+  source: 4
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   sub:
-    - 今日事&#44;今日畢
-    - Never put off till tomorrow what you can do today
+    # - 今日事&#44;今日畢
+    # - Never put off till tomorrow what you can do today
+    - HI&#44;DARLING!
 
 ####    側邊欄    ####
 #-------------------------------------

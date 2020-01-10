@@ -11,6 +11,7 @@ authorDesc:
 tags:
 keywords:
 description: 对于迁站的痛苦想必很多站长都深有体会
+cover: http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg
 photos: http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg
 ---
 

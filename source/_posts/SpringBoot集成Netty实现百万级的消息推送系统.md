@@ -11,6 +11,7 @@ authorDesc:
 tags:
 keywords:
 description:
+cover: https://images.jsonpop.cn/UQ47Hg.png
 photos: https://images.jsonpop.cn/UQ47Hg.png
 ---
 

@@ -11,6 +11,7 @@ authorDesc:
 tags:
 keywords:
 description:
+cover: http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg
 photos: http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg
 ---
 
