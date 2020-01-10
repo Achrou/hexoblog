@@ -3,16 +3,17 @@ title: POI导出服务设计
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:57:53
 author: MoMik
+cover: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g7tsev17j30u00do42l.jpg'
+photos: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g7tsev17j30u00do42l.jpg'
+abbrlink: 22821
+date: 2019-04-26 17:57:53
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: http://wx3.sinaimg.cn/large/0069lHOigy1g2g7tsev17j30u00do42l.jpg
-photos: http://wx3.sinaimg.cn/large/0069lHOigy1g2g7tsev17j30u00do42l.jpg
 ---
 
 ### 序言

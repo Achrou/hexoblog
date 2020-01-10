@@ -3,16 +3,17 @@ title: Heroku云平台部署站点
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:33:43
 author: MoMik
+cover: 'http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg'
+photos: 'http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg'
+abbrlink: 25797
+date: 2019-04-26 17:33:43
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg
-photos: http://wx1.sinaimg.cn/large/0069lHOigy1g2g68cki8nj30m2066mxd.jpg
 ---
 
 ### 序言

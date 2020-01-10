@@ -4,6 +4,11 @@ author: MoMik
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
+cover: >-
+  https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/YP6fUqzMKEbXRWxC4A35l5ZMGNHkttpTJmUFlcDEQEs!/r/dFIBAAAAAAAAnull&bo=MAe.ATAHvgEDCSw!&rf=photolist&t=5_yake_qzoneimgout.png
+photos: >-
+  https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/YP6fUqzMKEbXRWxC4A35l5ZMGNHkttpTJmUFlcDEQEs!/r/dFIBAAAAAAAAnull&bo=MAe.ATAHvgEDCSw!&rf=photolist&t=5_yake_qzoneimgout.png
+abbrlink: 4459
 date: 2019-07-05 22:19:37
 authorLink:
 authorAbout:
@@ -11,8 +16,6 @@ authorDesc:
 tags:
 keywords:
 description:
-cover: https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/YP6fUqzMKEbXRWxC4A35l5ZMGNHkttpTJmUFlcDEQEs!/r/dFIBAAAAAAAAnull&bo=MAe.ATAHvgEDCSw!&rf=photolist&t=5_yake_qzoneimgout.png
-photos: https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/YP6fUqzMKEbXRWxC4A35l5ZMGNHkttpTJmUFlcDEQEs!/r/dFIBAAAAAAAAnull&bo=MAe.ATAHvgEDCSw!&rf=photolist&t=5_yake_qzoneimgout.png
 ---
 
 一开始使用client模式在浏览器进行访问（GET）

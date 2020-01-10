@@ -3,16 +3,17 @@ title: 安装Vue教程
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:29:22
 author: MoMik
+cover: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg'
+photos: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg'
+abbrlink: 7055
+date: 2019-04-26 17:29:22
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg
-photos: http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg
 ---
 
 安装VUE之前需要先安装NODE.JS

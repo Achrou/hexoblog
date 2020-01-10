@@ -3,16 +3,17 @@ title: 关于Java多线程的理解
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:27:52
 author: MoMik
+cover: 'https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png'
+photos: 'https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png'
+abbrlink: 58178
+date: 2019-04-26 17:27:52
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png
-photos: https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png
 ---
 
 首先说到线程就要提一下进程：

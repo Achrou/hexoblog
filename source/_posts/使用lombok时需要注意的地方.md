@@ -4,11 +4,12 @@ author: MoMik
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
+Tags: lombok
+abbrlink: 10056
 date: 2019-04-28 11:54:40
 authorLink:
 authorAbout:
 authorDesc:
-Tags: lombok
 keywords:
 description:
 photos:

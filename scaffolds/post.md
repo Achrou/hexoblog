@@ -12,4 +12,5 @@ tags:
 keywords: 
 description: 
 photos: 
+cover: 
 ---

@@ -4,6 +4,7 @@ author: MoMik
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
+abbrlink: 2418
 date: 2019-06-26 13:14:16
 authorLink:
 authorAbout:

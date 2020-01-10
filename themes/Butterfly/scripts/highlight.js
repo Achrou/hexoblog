@@ -45,7 +45,6 @@ hexo.extend.filter.register('after_post_render', data => {
 
     })
   }
-
   if (theme.highlight_copy) {
     var $copyIcon = $('<i class="fa fa-clipboard" aria-hidden="true"></i>')
     var $notice = $('<div class="copy-notice"></div>')

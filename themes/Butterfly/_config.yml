@@ -11,8 +11,8 @@ menu:
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fa fa-link
   留言板: /comment || fa fa-commenting-o
-  关于我: /about/ || fa fa-heart
-  爱好||fa fa-list:
+  About||fa fa-heart: 
+    - Me || /about/ || fa fa-info
     - 音乐 || /music/ || fa fa-music
     - 电影 || /movies/ || fa fa-film
     - 图书 || /books/ || fa fa-book
@@ -302,12 +302,12 @@ qihu_site_verification:
 
 # 友情鏈接界面設置
 Flink:
-  headline: 友情鏈接
+  headline: 友情链接
   info_headline: 我的Blog資料
-  name: Blog 名字： JerryC
-  address: Blog 地址： https://jerryc.me/
-  avatar: Blog 頭像： https://jerryc.me/img/avatar.png
-  info: Blog 簡介： 今日事,今日畢
+  name: Blog 名字： MoMik's Blog
+  address: Blog 地址： https://jsonpop.cn/
+  avatar: Blog 頭像： https://jsonpop.cn/img/avatar.png
+  info: Blog 簡介：HI,DARLING!
   comment: 如果需要交換友鏈,請留言
 
 # 打賞按鈕

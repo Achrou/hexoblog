@@ -15,8 +15,14 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: /
 root: /
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
+
+# abbrlink config
+abbrlink:
+  alg: crc32  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex
 
 # Directory
 source_dir: source
@@ -39,8 +45,8 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight: 
-  enable: false
-  line_number: false
+  enable: true
+  line_number: true
   auto_detect: false
   tab_replace:
   
@@ -115,7 +121,7 @@ douban:
   movie:
     title: '我的观影历程'
     quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
-  timeout: 10000 
+  timeout: 1800000 
 
 aplayer:
   meting: true

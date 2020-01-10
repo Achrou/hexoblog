@@ -3,16 +3,17 @@ title: Ubuntu 16.04 升级Python3.x
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:29:22
 author: MoMik
+cover: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g7m5li9qj318g0nudia.jpg'
+photos: 'http://wx3.sinaimg.cn/large/0069lHOigy1g2g7m5li9qj318g0nudia.jpg'
+abbrlink: 26643
+date: 2019-04-26 17:29:22
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: http://wx3.sinaimg.cn/large/0069lHOigy1g2g7m5li9qj318g0nudia.jpg
-photos: http://wx3.sinaimg.cn/large/0069lHOigy1g2g7m5li9qj318g0nudia.jpg
 ---
 
 ## 序言

@@ -3,16 +3,17 @@ title: 基于Redis分布式锁的实现
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-26 17:32:48
 author: MoMik
+cover: 'http://wx2.sinaimg.cn/large/0069lHOigy1g2g7onydgkj30iq09dgn0.jpg'
+photos: 'http://wx2.sinaimg.cn/large/0069lHOigy1g2g7onydgkj30iq09dgn0.jpg'
+abbrlink: 22576
+date: 2019-04-26 17:32:48
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
 description:
-cover: http://wx2.sinaimg.cn/large/0069lHOigy1g2g7onydgkj30iq09dgn0.jpg
-photos: http://wx2.sinaimg.cn/large/0069lHOigy1g2g7onydgkj30iq09dgn0.jpg
 ---
 
 首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：

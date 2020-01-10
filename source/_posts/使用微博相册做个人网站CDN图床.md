@@ -3,16 +3,17 @@ title: 使用微博相册做个人网站CDN图床
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2019-04-25 17:39:32
 author: MoMik
+description: 对于迁站的痛苦想必很多站长都深有体会
+cover: 'http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg'
+photos: 'http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg'
+abbrlink: 31195
+date: 2019-04-25 17:39:32
 authorLink:
 authorAbout:
 authorDesc:
 tags:
 keywords:
-description: 对于迁站的痛苦想必很多站长都深有体会
-cover: http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg
-photos: http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg
 ---
 
 ## #序言
