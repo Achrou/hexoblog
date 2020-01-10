@@ -10,11 +10,12 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fa fa-link
-  留言板: /comment || fa fa-link
+  留言板: /comment || fa fa-commenting-o
   关于我: /about/ || fa fa-heart
   爱好||fa fa-list:
     - 音乐 || /music/ || fa fa-music
     - 电影 || /movies/ || fa fa-film
+    - 图书 || /books/ || fa fa-book
 
 # Favicon
 # ---------------
