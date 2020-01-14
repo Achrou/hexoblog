@@ -114,7 +114,7 @@ feed:
 
 douban:
   user: 203204069
-  builtin: true
+  builtin: false
   book:
     title: '图书'
     quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
