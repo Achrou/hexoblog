@@ -45,5 +45,23 @@ hexo.extend.filter.register('after_post_render', data => {
     }  
   }
 
+  // a标签后加上link图标
+  const links = $('p a');
+  links.each((i, o) => {
+    var num = $(o).children().length
+    if(num==0){
+      $(o).addClass('layout_post_link')
+    }
+  });
+
+  // const blockquotes = $('blockquote');
+  // blockquotes.each((i, o) => {
+  //   var text = $(o).text()
+  //   if(text.startsWith("github")){
+
+  //   }
+    
+  // });
+
   data.content = $.html();
 }, 100);

@@ -20,6 +20,20 @@ menu:
 # Favicon
 # ---------------
 favicon: /img/author.gif
+# Aplayer播放器
+aplayer: 
+  enable: true
+  id: 455354804
+  server: netease
+  type: playlist
+  fixed: true
+  mini: false
+  autoplay: false
+  loop: all
+  order: random
+  preload: none
+  volume: 0.7
+  mutex: true
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -624,11 +638,14 @@ CDN_USE:
     - /css/index.css
     - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
     # - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css #fontawesomeV5_css
+    - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css # aplayer吸底播放器
 
   js:
     - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
     - /js/utils.js
     - /js/main.js
+    - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js # aplayer吸底播放器
+    - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
 
 # CDN
 # 非必要不要修改
