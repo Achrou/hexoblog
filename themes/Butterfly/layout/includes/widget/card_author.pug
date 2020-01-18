@@ -1,7 +1,9 @@
 .card-widget.card-info
   .card-content
+    a.card-forkme-github(href=theme.forkme_github.link target="_blank")
+      img.attachment-full.size-full(width="149" height="149" src=theme.forkme_github.pic alt=theme.forkme_github.alt data-recalc-dims="1")
     .card-info-avatar.is-center
-      img.site-author-image(src="http://wx4.sinaimg.cn/large/0069lHOigy1g2g0os2qe4g30f008g139.gif")
+      img.site-author-image(src=config.author_bg)
       img.about-photo(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt="avatar")
       .site-author-name
         span(style="opacity:.2")= "BUG"
@@ -22,7 +24,7 @@
             .length_num= site.tags.length
 
       if site.categories.length
-        .card-info-data-item.is-center      
+        .card-info-data-item.is-center
           a(href=url_for(config.category_dir) + '/')
             .headline= _p('aside.categories') 
             .length_num= site.categories.length
@@ -36,4 +38,6 @@
         .card-info-social-icons.is-center
           each url, icon in theme.social
             a.social-icon(href=url target="_blank")
-              i(class=icon aria-hidden="true")
+              //i(class=icon aria-hidden="true")
+              svg.iconfont_icon(aria-hidden="true")
+                use(xlink:href="#"+icon)

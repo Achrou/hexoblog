@@ -5,9 +5,10 @@
 # Site
 title: MoMik's Blog
 subtitle:
-description: 我可以捏一下你的脸吗？
+description: 我可以捏一下你的脸吗？🙃
 keywords:
 author: MoMik
+author_bg: https://images.jsonpop.cn/blog/author_bg.gif
 language: zh-CN
 timezone:
 

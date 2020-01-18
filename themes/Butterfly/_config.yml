@@ -17,6 +17,11 @@ menu:
     - 电影 || /movies/ || fa fa-film
     - 图书 || /books/ || fa fa-book
 
+forkme_github:
+  link: https://github.com/Aicirou
+  pic: https://images.jsonpop.cn/blog/forkme_github_right.png
+  alt: Fork me on GitHub
+
 # Favicon
 # ---------------
 favicon: /img/author.gif
@@ -54,7 +59,7 @@ highlight_copy: true #代碼複製按鈕
 highlight_lang: true #代碼語言顯示
 highlight_shrink: false # true 全部代碼框不展開，需點擊 '>' 打開 / false 代碼框展開，有'>'點擊按鈕 | none 代碼框展開，不顯示 '>' 按鈕
 
-code_word_wrap: false
+code_word_wrap: true
 
 # copy setting
 # 是否禁止複製（如果禁止，highlight_copy的功能將無效)
@@ -68,9 +73,13 @@ copy:
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/Aicirou
-  fa fa-envelope: mailto:aicirou@gmail.com
-  fa fa-rss: /atom.xml
+  # iconGitHub: https://github.com/Aicirou
+  iconQQ: http://wpa.qq.com/msgrd?v=3&uin=2643053021&site=qq&menu=yes
+  iconweixin: https://images.jsonpop.cn/wechat.png
+  iconwangyiyun: https://music.163.com/#/user/home?id=326715902
+  icondouyin: https://images.jsonpop.cn/blog/douyin.png
+  iconQQyouxiang: mailto:aicirou@gmail.com
+  # iconrss: /atom.xml
 
 ####    search    ####
 # Algolia search
@@ -639,6 +648,7 @@ CDN_USE:
     - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
     # - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css #fontawesomeV5_css
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css # aplayer吸底播放器
+    # - //at.alicdn.com/t/font_1618098_1v838vchoe2.css
 
   js:
     - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
@@ -646,6 +656,7 @@ CDN_USE:
     - /js/main.js
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js # aplayer吸底播放器
     - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
+    - //at.alicdn.com/t/font_1618098_qqhczwrs5ti.js
 
 # CDN
 # 非必要不要修改
