@@ -2,6 +2,8 @@ article#page
   .article-container
     blockquote
       p#blockquote_momik
+      - var test_momik = momik
+      p= test_momik
     .hexo-douban-tabs
       a#hexo-douban-tab1.hexo-douban-tab(href="javascript:;" rel="external")
       a#hexo-douban-tab2.hexo-douban-tab(href="javascript:;" rel="external")
@@ -12,6 +14,7 @@ article#page
       .hexo-douban-item3
 
     script. 
+      var momik = "哈哈哈哈哈哈哈哈"
       Element.prototype.siblings = function () {
         var siblingElement = [];
         var sibs = this.parentNode.children;
