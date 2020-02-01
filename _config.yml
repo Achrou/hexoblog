@@ -113,16 +113,16 @@ feed:
 
 
 
-douban:
-  user: 203204069
-  builtin: true
-  book:
-    title: '图书'
-    quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
-  movie:
-    title: '我的观影历程'
-    quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
-  timeout: 1800000 
+# douban:
+#   user: 203204069
+#   builtin: true
+#   book:
+#     title: '图书'
+#     quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
+#   movie:
+#     title: '我的观影历程'
+#     quote: '人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。'
+#   timeout: 1800000 
 
 aplayer:
   meting: true

@@ -19,7 +19,7 @@
     clear: both;
     min-height: 170px;
     padding: 10px 0;
-    border-bottom: 1px #ddd solid;
+    border-bottom: 1px #ddd dashed;
 }
 
 @media screen and (max-width: 600px) {
@@ -71,3 +71,27 @@
     display: block;
 }
 
+.hexo-douban-meta .rating1-t,.rating2-t,.rating3-t,.rating4-t,.rating5-t{
+    display: inline-block;
+    zoom: 1;
+    background: -webkit-image-set(url(https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png) 1x, url(https://img3.doubanio.com/f/shire/0147ca9efddcac80050854590d26bee587b008df/pics/rating_icons/ic_rating_s@2x.png) 2x) no-repeat;
+    width: 55px;
+    height: 11px;
+    margin: 0 8px 0 0;
+    overflow: hidden;
+}
+.hexo-douban-meta .rating1-t{
+    background-position: 0 -88px;
+}
+.hexo-douban-meta .rating2-t{
+    background-position: 0 -66px;
+}
+.hexo-douban-meta .rating3-t{
+    background-position: 0 -44px;
+}
+.hexo-douban-meta .rating4-t{
+    background-position: 0 -22px;
+}
+.hexo-douban-meta .rating5-t{
+    background-position: 0 0px;
+}

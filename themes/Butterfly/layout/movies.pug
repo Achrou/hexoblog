@@ -1,55 +1,21 @@
 article#page
   .article-container
     blockquote
-      p#blockquote_momik
-      - var test_momik = momik
-      p= test_momik
+      p#blockquote_momik= "人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。"
     .hexo-douban-tabs
-      a#hexo-douban-tab1.hexo-douban-tab(href="javascript:;" rel="external")
-      a#hexo-douban-tab2.hexo-douban-tab(href="javascript:;" rel="external")
-      a#hexo-douban-tab3.hexo-douban-tab(href="javascript:;" rel="external")
+      a#hexo-douban-tab-do.hexo-douban-tab(href="javascript:;" rel="external")="在看(0)"
+      a#hexo-douban-tab-wish.hexo-douban-tab(href="javascript:;" rel="external")="想看(0)"
+      a#hexo-douban-tab-collect.hexo-douban-tab(href="javascript:;" rel="external")="已看(0)"
     div
-      .hexo-douban-item1
-      .hexo-douban-item2
-      .hexo-douban-item3
+      #hexo-douban-item
 
-    script. 
-      var momik = "哈哈哈哈哈哈哈哈"
-      Element.prototype.siblings = function () {
-        var siblingElement = [];
-        var sibs = this.parentNode.children;
-        for (var i = 0; i < sibs.length; i++) {
-            if (sibs[i] !== this) {
-                siblingElement.push(sibs[i]);
-            }
-        }
-        return siblingElement;
-      };
-      function tabClick() {
-        //修改标签样式
-        this.classList.add('hexo-douban-active');
-        var sibs = this.siblings();
-        for (var j = 0; j < sibs.length; j++) {
-          sibs[j].classList.remove('hexo-douban-active');
-        }
-        //显示对应板块
-        var itemId = this.id.replace('tab', 'item');
-        var target = document.getElementById(itemId);
-        target.classList.remove('hexo-douban-hide');
-        target.classList.add('hexo-douban-show');
-        sibs = document.getElementById(itemId).siblings();
-        for (var k = 0; k < sibs.length; k++) {
-          sibs[k].classList.remove('hexo-douban-show');
-          sibs[k].classList.add('hexo-douban-hide');
-        }
-      }
-      var tabs = document.getElementsByClassName("hexo-douban-tab");
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].onclick = tabClick;
-        tabs[i].onclick.apply(tabs[i]);
-      }
-      tabs[2].click();
+      .hexo-douban-pagination
+        a.hexo-douban-button.hexo-douban-firstpage(href="javascript:;")="首页"
+        a.hexo-douban-button.hexo-douban-previouspage(href="javascript:;")="上一页"
+        span.hexo-douban-pagenum= "2 / 3"
+        a.hexo-douban-button.hexo-douban-nextpage(href="javascript:;")="下一页"
+        a.hexo-douban-button.hexo-douban-lastpage(href="javascript:;")="尾页"
 
   if page.comments !== false
     include includes/comments/index.pug
-script(src="/js/movies.js")
+// script(src="/js/movies.js")

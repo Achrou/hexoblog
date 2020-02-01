@@ -1,62 +1,152 @@
-// $.ajax({
-// 	url: "https://images.jsonpop.cn/items.json",//json文件位置，文件名
-// 	type: "GET",
-// 	dataType: "json",
-// 	success: function(data) {
-// 		for(var i = 0;i<data.length;i++){
-// 			console.log(data[i].title)
-// 			$("#hexo-douban-tab1").text("在看（"+data.length+"）")
-// 		}
-// 	}
-// })
-window.onload = function () {
-	document.getElementById("blockquote_momik").innerText = "人的生命有限。倘若你能专注地看一本书，一部电影，你就因此经历了另外一个人生。"
-	var url = "https://images.jsonpop.cn/items.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
-	var request = new XMLHttpRequest();
-	request.open("get", url);/*设置请求方法与路径*/
-	request.send(null);/*不发送数据到服务器*/
-	request.onload = function () {/*XHR对象获取到返回信息后执行*/
-	    if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
-	        var data = JSON.parse(request.responseText);
-	        document.getElementById("hexo-douban-tab1").innerText = "在看（"+data.length+"）"
-	        document.getElementById("hexo-douban-tab2").innerText = "想看（"+data.length+"）"
-	        document.getElementById("hexo-douban-tab3").innerText = "已看（"+data.length+"）"
-	        var html = "";
-	        for(var i = 0;i<data.length;i++){
-				html +='<div class="hexo-douban-item">'
-				html +='<div class="hexo-douban-picture">'
-				html +='<img src="'+data[i].pic+'" referrerpolicy="no-referrer">'
-				html +='</img>'
-				html +='</div>'
-
-				html +='<div class="hexo-douban-info">'
-				html +='<div class="hexo-douban-title">'
-				html +='<a target="_blank" href="'+data[i].href+'">'
-				html += data[i].title
-				html +='</a>'
-				html +='</div>'
-				html +='<div class="hexo-douban-meta">'
-				html += data[i].intro
-				html +='</div>'
-				html +='</div>'
-				html +='</div>'
-			}
-			var itemElement = document.getElementsByClassName("hexo-douban-item3")[0];
-			itemElement.innerHTML = html
-	    }
+Element.prototype.siblings = function () {
+	var siblingElement = [];
+	var sibs = document.getElementsByClassName("hexo-douban-tab")
+	for (var i = 0; i < sibs.length; i++) {
+		siblingElement.push(sibs[i]);
 	}
-}
+	return siblingElement;
+};
 
-/**
+$(function () {
+	var pageNo = 1;
+	var pageSize = 10;
+	var total = 0;
+	var totalPages = 0;
+	var type = "collect"
+	var serverPath = "http://api.douban.jsonpop.cn";
+
+	getCount();
+
+	var tabs = $(".hexo-douban-tab");
+	for (var i = 0; i < tabs.length; i++) {
+		$(tabs[i]).on('click',function(){
+			tabClick(this)
+		});
+	}
+	tabs[2].click();
+
+	$(".hexo-douban-firstpage").click(function(){
+		pageNo = 1;
+		getData();
+	});
+	$(".hexo-douban-previouspage").click(function(){
+		if(pageNo-1>0){
+			pageNo = pageNo - 1;
+			getData();
+		}
+	});
+	$(".hexo-douban-nextpage").click(function(){
+		if(pageNo+1<=totalPages){
+			pageNo = pageNo + 1;
+			getData();
+		}
+	});
+	$(".hexo-douban-lastpage").click(function(){
+		pageNo = totalPages;
+		getData();
+	});
+
+	function tabClick(that) {
+		var sibs = that.siblings();
+		for (var j = 0; j < sibs.length; j++) {
+			sibs[j].classList.remove('hexo-douban-active');
+		}
+		//修改标签样式
+		that.classList.add('hexo-douban-active');
+		type = that.id.replace('hexo-douban-tab-', '')
+		pageNo = 1;
+		getData();
+	}
+
+	function getCount(){
+		$.ajax({
+			url: serverPath+"/movies/count",
+			type: "POST",
+			dataType: "JSON",
+			contentType:"application/json;charset=utf-8",
+			success: function(data) {
+				$("#hexo-douban-tab-do").text("在看("+data.doCount+")");
+				$("#hexo-douban-tab-wish").text("想看("+data.wishCount+")");
+				$("#hexo-douban-tab-collect").text("已看("+data.collectCount+")");
+			},
+			error: function(err){
+				console.log(err);
+			}
+		})
+	}
+
+	function getData(){
+		$.ajax({
+			url: serverPath+"/movies/"+type,
+			type: "POST",
+			dataType: "JSON",
+			contentType:"application/json;charset=utf-8",
+			data: '{"pageNo":'+pageNo+',"pageSize":'+pageSize+'}',
+			success: function(data) {
+				var html = "";
+				var content = data.content;
+				for(var i = 0;i<content.length;i++){
+					html +='<div class="hexo-douban-item">'
+					html +='<div class="hexo-douban-picture">'
+					html +='<img src="'+content[i].pic+'" referrerpolicy="no-referrer">'
+					html +='</img>'
+					html +='</div>'
+
+					html +='<div class="hexo-douban-info">'
+					html +='<div class="hexo-douban-title">'
+					html +='<a target="_blank" href="'+content[i].href+'">'
+					html += content[i].title
+					html +='</a>'
+					html +='</div>'
+					html +='<div class="hexo-douban-meta">'
+					html +='<div class="intro">'
+					html += content[i].intro
+					html +='</div>'
+					html +='<span class="'+content[i].rating+'">'
+					html +='</span>'
+					html +='<span class="date">'
+					html += content[i].date
+					html +='</span>'
+					html +='</div>'
 
 
-.hexo-douban-item
-          .hexo-douban-picture
-            img.lazyload(data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2577437186.jpg" onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt="test-alt" referrerPolicy="no-referrer")
-          .hexo-douban-info
-            .hexo-douban-title
-              a(target="_blank" href="")= "标题"
-            .hexo-douban-meta= "信息"
+
+					html +='<div class="hexo-douban-comment">'
+					html += content[i].comment
+					html +='</div>'
 
 
-            **/
+					html +='</div>'
+					html +='</div>'
+				}
+				$("#hexo-douban-item").html(html);
+
+				pageNo = data.pageNo;
+				pageSize = data.pageSize;
+				total = data.total;
+				totalPages = data.totalPages;
+
+				$(".hexo-douban-pagenum").text(pageNo + " / " + totalPages);
+			},
+			error: function(err){
+				console.log(err);
+			}
+		})
+	}
+
+	$.ajaxSetup({
+		layerIndex:-1, //保存当前请求对应的提示框index,用于后面关闭使用
+		//在请求显示提示框
+		beforeSend: function(jqXHR, settings) {
+			this.layerIndex = layer.load(1);
+		},
+		//请求完毕后（不管成功还是失败），关闭提示框
+		complete: function () {
+			layer.close(this.layerIndex);
+		},
+		//请求失败时，弹出错误信息
+		error: function (jqXHR, status, e) {
+			layer.alert('数据请求失败，请后再试!');
+		}
+	});
+});

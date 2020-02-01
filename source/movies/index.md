@@ -5,5 +5,5 @@ date: 2020-01-14 14:51:38
 keywords:
 description:
 type: "movies"
-top_img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/music.jpg
+top_img: http://pic1.win4000.com/wallpaper/0/538eac76e91c6.jpg
 ---
