@@ -76,8 +76,16 @@ html(lang=config.language data-theme=theme.display_mode)
       footer#footer(style=footer_bg data-type=is_bg)
         include ./footer.pug    
     include ./rightside.pug
+
     each item in theme.CDN_USE.js
-      script(src=url_for(item))
+      // 加载页面独有js
+      if (item.indexOf("movies.js") != -1)
+        if (page.type === 'movies')
+          script(src=url_for(item))
+      else
+        // 全局js
+        script(src=url_for(item))
+    
     include ./additional-js.pug
     include ./search/index.pug
     include ./comments/aplayer.pug
