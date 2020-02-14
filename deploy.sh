@@ -1,4 +1,5 @@
 BLOG_PATH="/data/hexoblog"
+STATIC_SITE="/www/wwwroot/hexoblog"
 echo "======================================"
 echo "script: cd $BLOG_PATH"
 cd $BLOG_PATH
@@ -8,3 +9,5 @@ echo "script: hexo clean..."
 hexo clean
 echo "script: hexo g..."
 hexo g
+echo "script: cp -r $BLOG_PATH/planA/ $STATIC_SITE..."
+cp -r $BLOG_PATH/planA/ $STATIC_SITE
