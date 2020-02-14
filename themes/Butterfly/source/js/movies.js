@@ -13,7 +13,7 @@ $(function () {
 	var total = 0;
 	var totalPages = 0;
 	var type = "collect"
-	var serverPath = "http://api.douban.jsonpop.cn";
+	var serverPath = "https://api.jsonpop.cn/douban";
 
 	getCount();
 
