@@ -79,7 +79,7 @@ try {
 
 ### 配置Webhooks
 
-![Gitee Webhooks配置](https://images.jsonpop.cn/blog/iShot2020-02-15 23.08.56.png)
+![Gitee Webhooks配置](https://images.jsonpop.cn/blog/iShot20200215230856.png)
 
 ### 安装github-webhook-handler
 
@@ -168,4 +168,3 @@ pm2 start webhook.js
 查看日志:`pm2 logs`
 
 ## 本地push代码测试
-
