@@ -99,3 +99,12 @@
 .hexo-douban-meta .rating5-t{
     background-position: 0 0px;
 }
+
+@media screen and (max-width: $sm)
+    .hexo-douban-meta
+        .intro
+            overflow : hidden
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
