@@ -3,8 +3,8 @@ STATIC_SITE="/www/wwwroot/hexoblog"
 echo "======================================"
 echo "script: cd $BLOG_PATH"
 cd $BLOG_PATH
-echo "script: git pull..."
-git pull
+echo "script: git pull gitee master..."
+git pull gitee master
 echo "script: hexo clean..."
 hexo clean
 echo "script: hexo g..."
