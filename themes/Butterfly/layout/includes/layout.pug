@@ -37,6 +37,8 @@ html(lang=config.language data-theme=theme.display_mode)
     meta(name="author" content=pageAuthor)
     meta(name="copyright" content=pageCopyright)
     meta(name ="format-detection" content="telephone=no")
+    if (page.type === 'movies')
+      meta(name ="referrer" content="no-referrer")
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     include ./head.pug
     include ./config.pug

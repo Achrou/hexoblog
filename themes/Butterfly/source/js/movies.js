@@ -87,10 +87,14 @@ $(function () {
 				var content = data.content;
 				for(var i = 0;i<content.length;i++){
 					html +='<div class="hexo-douban-item">'
-					html +='<div class="hexo-douban-picture">'
-					html +='<img src="'+content[i].pic+'" referrerpolicy="no-referrer">'
-					html +='</img>'
+					var pic = content[i].pic
+					html +='<div class="hexo-douban-picture" style="background-image: url('+pic+');">'
 					html +='</div>'
+
+					// html +='<div class="hexo-douban-picture">'
+					// html +='<img src="'+pic+'"data-src="'+pic+'" referrerpolicy="no-referrer">'
+					// html +='</img>'
+					// html +='</div>'
 
 					html +='<div class="hexo-douban-info">'
 					html +='<div class="hexo-douban-title">'
