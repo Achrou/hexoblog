@@ -88,13 +88,18 @@ $(function () {
 				for(var i = 0;i<content.length;i++){
 					html +='<div class="hexo-douban-item">'
 					var pic = content[i].pic
-					html +='<div class="hexo-douban-picture" style="background-image: url('+pic+');">'
-					html +='</div>'
-
-					// html +='<div class="hexo-douban-picture">'
-					// html +='<img src="'+pic+'"data-src="'+pic+'" referrerpolicy="no-referrer">'
-					// html +='</img>'
+					// html +='<div class="hexo-douban-picture" style="background-image: url('+pic+');">'
 					// html +='</div>'
+
+					html +='<div class="hexo-douban-picture">'
+					html +='<img src="'+pic+'"data-src="'+pic+'" referrerpolicy="no-referrer">'
+					html +='</img>'
+
+					html +='<div class="hexo-douban-tips">'
+					html +='8.5'
+					html +='</div>'
+					
+					html +='</div>'
 
 					html +='<div class="hexo-douban-info">'
 					html +='<div class="hexo-douban-title">'
@@ -106,6 +111,13 @@ $(function () {
 					html +='<div class="intro">'
 					html += content[i].intro
 					html +='</div>'
+					html +='</div>'
+
+
+
+					html +='<div class="hexo-douban-eval">'
+
+					html +='<div>'
 					html +='<span class="'+content[i].rating+'">'
 					html +='</span>'
 					html +='<span class="date">'
@@ -113,10 +125,12 @@ $(function () {
 					html +='</span>'
 					html +='</div>'
 
+					if(content[i].comment!=''){
+						html +='<div class="hexo-douban-comment">'
+						html += content[i].comment
+						html +='</div>'
+					}
 
-
-					html +='<div class="hexo-douban-comment">'
-					html += content[i].comment
 					html +='</div>'
 
 

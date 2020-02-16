@@ -4,19 +4,20 @@ author: MoMik
 avatar: /images/author.gif
 categories: 自学教程
 comments: true
-date: 2020-02-15 23:39:36
-authorLink:
-authorAbout:
-authorDesc:
 tags:
   - Hexo
   - DevOps
   - 自动化部署
   - Webhooks
+cover: 'https://images.jsonpop.cn/blog%2Fhexo-devops-cover.jpg'
+abbrlink: 27f296b8
+date: 2020-02-15 23:39:36
+authorLink:
+authorAbout:
+authorDesc:
 keywords:
 description:
 photos:
-cover: https://images.jsonpop.cn/blog%2Fhexo-devops-cover.jpg
 ---
 
 虽然hexo为了简化发布流程已经有了直接部署到云服务器上的插件，但是我还是觉得有点麻烦并且效率不太好。(说白了就是懒)
