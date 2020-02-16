@@ -96,7 +96,7 @@ $(function () {
 					html +='</img>'
 
 					html +='<div class="hexo-douban-tips">'
-					html +='8.5'
+					html +=content[i].ratingNum
 					html +='</div>'
 					
 					html +='</div>'
