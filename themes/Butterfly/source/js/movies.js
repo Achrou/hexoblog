@@ -135,6 +135,20 @@ $(function () {
 
 
 					html +='</div>'
+
+					// 在线观看下载
+					/*html+='<div class = "hexo-douban-player-info">'
+					html+='<div class="hexo-douban-player">'
+					html+='<div>#在线播放#</div>'
+					html+='<a href="/">H1080P</a>'
+					html+='</div>'
+
+					html+='<div class="hexo-douban-player-download">'
+					html+='<div>#资源下载#</div>'
+					html+='<a href="magnet:?xt=urn:btih:D9843BC408B1D70E3A491537C26512B5E840502E">[梨泰院Class][第01集][韩语中字][720p]</a>'
+					html+='</div>'*/
+
+					html+='</div>'
 					html +='</div>'
 				}
 				$("#hexo-douban-item").html(html);

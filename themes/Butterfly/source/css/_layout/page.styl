@@ -393,3 +393,82 @@
   #tag,
   #category
     width: 100% !important
+
+/** 仿”读两句诗“样式 START **/
+@media screen and (max-width:860px) {
+    .entry-content .begin,.single-begin {
+      margin-top:6px
+    }
+}
+.entry-content {
+    position:relative
+    font-family: 'Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif;
+}
+.entry-content p {
+    color:#797979
+}
+.entry-content p {
+    line-height:30px
+}
+.poem-wrap {
+    position:relative;
+    width:730px;
+    max-width:80%;
+    border:2px solid #797979;
+    border-top:0;
+    text-align:center;
+    margin:80px auto
+    margin-top: 0px
+}
+.poem-wrap h1 {
+    position:relative;
+    margin-top:-20px;
+    display:inline-block;
+    letter-spacing:4px;
+    color:#797979
+}
+.poem-wrap p {
+    width:70%;
+    margin:auto;
+    line-height:30px;
+    color:#797979
+}
+.poem-wrap p#poem {
+    font-size:25px
+}
+.poem-wrap p#info {
+    font-size:15px;
+    margin:15px auto
+}
+.poem-border {
+    position:absolute;
+    height:2px;
+    width:27%;
+    background-color:#797979
+}
+.poem-right {
+    right:0
+}
+.poem-left {
+    left:0
+}
+@media(max-width:685px) {
+    .poem-border {
+        width:18%
+    }
+}
+@media(max-width:500px) 
+{
+    .poem-wrap {
+      margin-top:60px;
+      margin-bottom:20px;
+      border-top:2px solid #797979
+    }
+    .poem-wrap h1 {
+        margin:20px 6px
+    }
+    .poem-border {
+        display:none
+    }
+}
+/** 仿”读两句诗“样式 END **/
