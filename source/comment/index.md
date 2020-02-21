@@ -7,7 +7,8 @@ comments: true
 photos: https://images.jsonpop.cn/20200220235603_w9tf4m_Screenshot.jpeg
 top_img: https://images.jsonpop.cn/20200220235603_w9tf4m_Screenshot.jpeg
 ---
-> 问题、反馈、想说的都在这里说
+> 留言时间建议在AM7:00-PM11:00，这个时间段留言会有邮件通知到我，其余时间不一定。
+> PS:如果想要接收到回复的邮件通知，留言时填写的邮箱地址一定要正确！
 <!-- {% raw %}
 <div class="entry-content">
   <div class="poem-wrap">

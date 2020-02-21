@@ -7,5 +7,51 @@ comments: true
 layout: "about"
 type: "about"
 photos: https://konachan.net/sample/80f2b97ce744e519c659144744ff7d43/Konachan.com%20-%20297850%20sample.jpg
-top_img: https://konachan.net/jpeg/cb722dd03a8907599e35cfa3701a6914/Konachan.com%20-%20297688%20black_hair%20headphones%20original%20reflection%20scarf%20sleeping%20snow%20tasuku_%28otomebotan%29.jpg
+top_img: https://images.jsonpop.cn/20200221225351_q9zqio_Screenshot.jpeg
 ---
+# 个人信息
+ - Email：aicirou@gmail.com/2643053021@qq.com
+ - Github：[https://github.com/Aicirou](https://github.com/Aicirou)
+
+---
+
+# 技术能力
+
+1. Web框架：SpringCloud/SpringBoot/SpringMvc/Mybatis/Netty
+2. 掌握常用设计模式，有架构优化封装经验
+3. 前端框架：Vue/Element-UI/Bootstrap/layui/
+4. 熟悉使用MySQL/Oracle等主流的关系型数据库,有良好的SQL书写功底
+5. 熟练使用Redis、zookeeper、kafka、Solr等相关中间件技术
+6. 熟练使用Nginx反向代理服务器以及Tomcat应用级服务器
+7. 熟练使用版本管理、文档和自动化部署工具：Git/Maven/Grade/Swagger2/Jenkins/Sonar
+8. 熟练使用Docket容器
+9. 熟悉 REST/HTTP、TCP/IP协议，有socket/websocket应用经验
+10. 了解JVM虚拟机
+11. 有相关技术博客独立运营
+
+---
+
+# 工作经历
+
+## 上海杰势科技(2018年3月 ~ 至今)
+### 杰势云平台
+B2C模式的电商平台，主要提供自营、淘宝联盟、京东联盟产品线上导购
+系统服务主要为：注册中心/配置中心Nacos、网关Gateway、鉴权服务、定时任务服务Quartz、分布式日志系统ELK、分布式事务中心TM-Lcn。
+平台服务主要为：平台管理系统、会员管理系统、运营管理、数据分析、消息服务、支付中心、三方服务
+在此项目中我负责架构搭建及部分平台服务的搭建。
+### 要充平台
+该平台主要服务于，政府、社区、物业公司、公寓、商业、等一切与纯电交通工具的充电服务，解决充电过程中的监管，监察，交易，查询的基本服务和搭建充电相关的周边服务
+平台主要由：WEB管理平台、要充APP、要充合作者APP
+主要负责平台架构搭建及充电设备（充电桩、充电柜）与服务端socket通信。
+通过在该项目中对socket相关网络知识的了解衍生出了我的三个个人开源项目
+## XX公司
+# 个人开源项目
+ - [Danmaku.ws](https://github.com/Aicirou/Danmaku.ws)：基于Dplayer播放器的实时弹幕插件
+ - [websocket-danmu](https://github.com/Aicirou/websocket-danmu)：使用Netty实现的高性能弹幕系统(待完善)
+ - [ByteDecode]()：适用基于byte字节流、protobuf协议转换，使用Netty的ByteBuf实现零拷贝
+
+---
+
+# 其他
+爱好：健身、篮球、旅游。
+自评：能独挡一面，喜欢挑战，跳出舒适区，冲击极限；学习能力强，自信乐观。
