@@ -289,7 +289,8 @@ ICP:
 
 ####   Analysis    ####
 # ---------------
-baidu_analytics:
+baidu_analytics: 5b874ff31c774f84986f0eebaa97265a
+
 
 # Google Analytics
 google_analytics:
