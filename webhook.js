@@ -18,7 +18,26 @@ handler.on('Push Hook', function (event) {
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
     event.payload.ref);
-    run_cmd('sh', ['./deploy.sh'], function(text){ console.log(text) });
+    run_cmd('sh', ['./deploy.sh pull'], function(text){ console.log(text) });
+    // 判断是否新装了插件
+    var commits = event.payload.commits;
+    if(!commits){
+      return;
+    }
+    for (var i = 0; i < commits.length; i++) {
+      var temp = commits[i];
+      var modified = temp["modified"];
+      if(!modified){
+        return;
+      }
+      if(contains(modified,["package.json","package-lock.json"])){
+        // 安装依赖/插件
+        run_cmd('sh', ['./deploy.sh i'], function(text){ console.log(text) });
+        break;
+      }
+
+    }
+    run_cmd('sh', ['./deploy.sh g'], function(text){ console.log(text) });
 })
 // GitHub
 /*handler.on('push', function (event) {
@@ -38,3 +57,14 @@ try {
   console.error('Error:', err.message)
 }
 
+function contains(array1,array2){
+  for (var i = 0; i < array1.length; i++) {
+    var temp = array1[i];
+    for (var j = 0; j < array2.length; j++) {
+      if(temp === array2[j]){
+        return true;
+      }
+    }
+  }
+  return false;
+}
