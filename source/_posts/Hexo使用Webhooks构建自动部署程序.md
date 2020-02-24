@@ -18,6 +18,7 @@ authorDesc:
 keywords:
 description:
 photos:
+top: True
 ---
 
 虽然hexo为了简化发布流程已经有了直接部署到云服务器上的插件，但是我还是觉得有点麻烦并且效率不太好。(说白了就是懒)
