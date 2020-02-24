@@ -18,7 +18,7 @@ handler.on('Push Hook', function (event) {
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
     event.payload.ref);
-    run_cmd('sh', ['./deploy.sh pull'], function(text){ console.log(text) });
+    run_cmd('sh', ['./deploy.sh','pull'], function(text){ console.log(text) });
     // 判断是否新装了插件
     var commits = event.payload.commits;
     if(!commits){
@@ -32,12 +32,12 @@ handler.on('Push Hook', function (event) {
       }
       if(contains(modified,["package.json","package-lock.json"])){
         // 安装依赖/插件
-        run_cmd('sh', ['./deploy.sh i'], function(text){ console.log(text) });
+        run_cmd('sh', ['./deploy.sh','i'], function(text){ console.log(text) });
         break;
       }
 
     }
-    run_cmd('sh', ['./deploy.sh g'], function(text){ console.log(text) });
+    run_cmd('sh', ['./deploy.sh','g'], function(text){ console.log(text) });
 })
 // GitHub
 /*handler.on('push', function (event) {
