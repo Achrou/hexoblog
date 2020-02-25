@@ -39,6 +39,12 @@ install(){
 	npm install
 }
 
+# 生成搜索索引
+algolia(){
+	echo "script: hexo algolia..."
+	hexo algolia
+}
+
 run(){
 	init
 	pull
@@ -61,6 +67,10 @@ case "$1" in
   "i")
 	init
 	install
+	;;
+  "a")
+	init
+	algolia
 	;;
   "run")
     run

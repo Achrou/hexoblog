@@ -24,18 +24,33 @@ handler.on('Push Hook', function (event) {
     if(!commits){
       return;
     }
+    var isinstall = false;
+    var isUpdIndex = false;
     for (var i = 0; i < commits.length; i++) {
       var temp = commits[i];
       var modified = temp["modified"];
-      if(!modified){
-        return;
-      }
-      if(contains(modified,["package.json","package-lock.json"])){
-        // 安装依赖/插件
-        run_cmd('sh', ['./deploy.sh','i'], function(text){ console.log(text) });
-        break;
+      if(modified){
+        if(contains(modified,["package.json","package-lock.json"])){
+          isinstall = true;
+        }
+        if(contains(modified,["source/_posts"])){
+          isUpdIndex = true;
+        }
       }
 
+      var added = temp["added"];
+      if(added){
+        if(contains(modified,["source/_posts"])){
+          isUpdIndex = true;
+        }
+      }
+    }
+    if(isinstall){
+      // 安装依赖/插件
+      run_cmd('sh', ['./deploy.sh','i'], function(text){ console.log(text) });
+    }
+    if(isUpdIndex){
+      run_cmd('sh', ['./deploy.sh','a'], function(text){ console.log(text) });
     }
     run_cmd('sh', ['./deploy.sh','g'], function(text){ console.log(text) });
 })
@@ -61,7 +76,7 @@ function contains(array1,array2){
   for (var i = 0; i < array1.length; i++) {
     var temp = array1[i];
     for (var j = 0; j < array2.length; j++) {
-      if(temp === array2[j]){
+      if(temp.indexOf(array2[j])!=-1){
         return true;
       }
     }
