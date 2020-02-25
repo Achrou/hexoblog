@@ -126,3 +126,9 @@ feed:
 
 aplayer:
   meting: true
+
+# 搜索
+algolia:
+  applicationID: '7IK9Y03TOT'
+  apiKey: '11a4d9905a34ae8fc50b2e802e118626'
+  indexName: 'hexoblog'

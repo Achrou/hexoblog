@@ -3,6 +3,6 @@ title: {{ title }}
 date: {{ date }}
 keywords: 
 description: 
-comments: false
-photos: 
+comments: true
+top_img:
 ---
