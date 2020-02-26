@@ -60,9 +60,11 @@ function isMobile () {
 
 function scrollTo (name) {
   var scrollOffset = $(name).offset()
-  $('body,html').animate({
-    scrollTop: scrollOffset.top
-  })
+  if (scrollOffset) {
+    $('body,html').animate({
+      scrollTop: $(name).offset().top
+    })
+  }
 };
 
 function loadScript (url, callback) {

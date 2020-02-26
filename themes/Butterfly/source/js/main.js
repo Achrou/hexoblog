@@ -1,6 +1,51 @@
 $(function () {
+
+  // $(document).pjax('a', '#pjax-container')
+  var pjax = new Pjax({
+    // elements: "a[data-pjax]",
+    elements: "a",
+    // 在页面进行 PJAX 时需要被替换的元素或容器，一条一个 CSS 选择器，数组形式
+    selectors: [
+      "title",
+      ".js-Pjax",
+      "#body-wrap",
+    ],
+    switches: {
+      "title": Pjax.switches.outerHTML,
+      ".js-Pjax": function(oldEl, newEl, options) {
+        oldEl.outerHTML = newEl.outerHTML
+        this.onSwitch()
+      },
+      "#body-wrap": function(oldEl, newEl, options) {
+        oldEl.outerHTML = newEl.outerHTML
+        this.onSwitch()
+        scrollTo('body')
+        showtoc()
+      }
+    },
+    scrollTo:0,
+    cacheBust: false,
+    debug: false
+  })
+  document.addEventListener('pjax:send', function(){
+    NProgress.start();
+  })
+  // Pjax 完成后，重新加载上面的函数
+  document.addEventListener('pjax:complete', function (){
+    // script[data-pjax], .pjax-reload script
+    $('script[data-pjax]').each(function () {
+      $(this).parent().append($(this).remove());
+    });
+    toggle_sidebar()
+    NProgress.done();
+  });
+
+
   const isSnackbar = GLOBAL_CONFIG.Snackbar !== undefined
-  const isTocContent = $('#sidebar .sidebar-toc__content').children().length > 0
+  //const isTocContent = $('#sidebar .sidebar-toc__content').children().length > 0
+  function isTocContent(){
+    return $('#sidebar .sidebar-toc__content').children().length > 0
+  }
   /**
    * 當menu過多時，自動適配，避免UI錯亂
    */
@@ -57,37 +102,42 @@ $(function () {
   /**
    * pc時 設置主頁top_img 為 fixed
    */
-  if (GLOBAL_CONFIG.isHome) {
+  /*if (GLOBAL_CONFIG.isHome) {
     if (/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {} else {
       $('.full_page').css('background-attachment', 'fixed')
     }
-  }
+  }*/
 
   /**
    * 進入post頁sidebar處理
    */
-  if (GLOBAL_CONFIG.isPost) {
-    // sidebar 自動打開
-    if ($('#sidebar').hasClass('auto_open') && isTocContent) {
-      $('#toggle-sidebar').addClass('on')
-      setTimeout(function () {
+  function showtoc(){
+    if (GLOBAL_CONFIG.isPost) {
+      // sidebar 自動打開
+      if ($('#sidebar').hasClass('auto_open') && isTocContent()) {
         $('#toggle-sidebar').addClass('on')
-        openSidebar()
-      }, 400)
-      isAdjust(1)
-    }
+        setTimeout(function () {
+          $('#toggle-sidebar').addClass('on')
+          openSidebar()
+        }, 400)
+        isAdjust(1)
+      }
 
-    // pc隱藏
-    if (isTocContent) {
-      $('#toggle-sidebar').css('opacity', '1')
-    } else {
-      $('#sidebar,#toggle-sidebar').css('display', 'none')
-    }
-    // mobile隱藏
-    if ($('#mobile-sidebar-toc .sidebar-toc__content').children().length === 0) {
-      $('#mobile-sidebar-toc,#mobile-toc-button').css('display', 'none')
+      // pc隱藏
+      if (isTocContent()) {
+        $('#toggle-sidebar').css('opacity', '1')
+      } else {
+        $('#sidebar,#toggle-sidebar').css('display', 'none')
+      }
+      // mobile隱藏
+      if ($('#mobile-sidebar-toc .sidebar-toc__content').children().length === 0) {
+        $('#mobile-sidebar-toc,#mobile-toc-button').css('display', 'none')
+      }
+    }else{
+      $('body').removeAttr("style")
     }
   }
+  showtoc()
 
   /**
    * 點擊左下角箭頭,顯示sidebar
@@ -119,21 +169,23 @@ $(function () {
     })
   }
 
-  $('#toggle-sidebar').on('click', function () {
-    if (!isMobile() && $('#sidebar').is(':visible')) {
-      var isOpen = $(this).hasClass('on')
-      isOpen ? $(this).removeClass('on') : $(this).addClass('on')
-      if (isOpen) {
-        closeSidebar()
-        setTimeout(function () {
-          isAdjust(2)
-        }, 500)
-      } else {
-        isAdjust(1)
-        openSidebar()
+  function toggle_sidebar(){
+    $('#toggle-sidebar').on('click', function () {
+      if (!isMobile() && $('#sidebar').is(':visible')) {
+        var isOpen = $(this).hasClass('on')
+        isOpen ? $(this).removeClass('on') : $(this).addClass('on')
+        if (isOpen) {
+          closeSidebar()
+          setTimeout(function () {
+            isAdjust(2)
+          }, 500)
+        } else {
+          isAdjust(1)
+          openSidebar()
+        }
       }
-    }
-  })
+    })
+  }
 
   /**
    * 首頁top_img底下的箭頭
@@ -360,7 +412,7 @@ $(function () {
   // main of scroll
   $(window).scroll(throttle(function (event) {
     var currentTop = $(this).scrollTop()
-    if (!isMobile() && isTocContent) {
+    if (!isMobile() && isTocContent()) {
       // percentage inspired by hexo-theme-next
       scrollPercent(currentTop)
       // head position

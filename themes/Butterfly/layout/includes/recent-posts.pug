@@ -19,7 +19,7 @@ each article , index in page.posts.data
             else
               img.post_bg(src=`${post_cover}` onerror=`this.onerror=null;this.src='`+ url_for(theme.lodding_bg.post_page) + `'` alt=title)            
     .recent-post-info   
-      a.article-title(href=url_for(link) title=title)= title
+      a.article-title(href=url_for(link) title=title data-pjax)= title
       if (article.top)
         span.article-meta
           i.fa.fa-thumb-tack.article-meta__icon.sticky

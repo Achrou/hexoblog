@@ -41,7 +41,7 @@ html(lang=config.language data-theme=theme.display_mode)
       meta(name ="referrer" content="no-referrer")
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     include ./head.pug
-    include ./config.pug
+    //include ./config.pug
   body
     if theme.fireworks && theme.fireworks.enable
       canvas.fireworks
@@ -58,7 +58,9 @@ html(lang=config.language data-theme=theme.display_mode)
         include ./sidebar.pug
       if (!is_post())
         include ./nav.pug
-      main#content-outer
+
+      - var home_content_class = is_home() ? 'home-content' : ''
+      main(id="content-outer" class=''+home_content_class)
         block top_img
         if (!is_post())
           #content-inner.layout_page
@@ -72,20 +74,20 @@ html(lang=config.language data-theme=theme.display_mode)
               div!= body
             else
               block content
-      
-      - var footer_bg = theme.footer_bg == false ? '' : bg_img
-      - var is_bg = theme.footer_bg == false ? 'color' : 'photo'
-      footer#footer(style=footer_bg data-type=is_bg)
-        include ./footer.pug    
+    .js-Pjax
+      include ./config.pug
+    - var footer_bg = theme.footer_bg == false ? '' : bg_img
+    - var is_bg = theme.footer_bg == false ? 'color' : 'photo'
+    footer#footer(style=footer_bg data-type=is_bg)
+      include ./footer.pug    
     include ./rightside.pug
 
     each item in theme.CDN_USE.js
       // 加载页面独有js
       if (item.indexOf("movies.js") != -1)
-        if (page.type === 'movies')
-          script(src=url_for(item))
+        //if (page.type === 'movies' data-pjax)
+        script(src=url_for(item) data-pjax)
       else
-        // 全局js
         script(src=url_for(item))
     
     include ./additional-js.pug

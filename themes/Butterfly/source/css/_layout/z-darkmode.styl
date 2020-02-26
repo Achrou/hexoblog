@@ -221,6 +221,10 @@ if hexo-config('darkmode.enable') || hexo-config('autoChangeMode') == '1' || hex
     .relatedPosts_title
       color: alpha(#FFFFFF, .8) !important
 
+    #nav
+      &.full_page:after
+        background: $dark-black
+
     // 時間軸界面
     .article-sort-item__title
       color: alpha(#FFFFFF, .6)
